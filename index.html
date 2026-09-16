@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hanna 英语复习站 · 首页</title>
+<style>
+:root{
+  --blue:#2563eb; --bg:#f6f7fb; --card:#ffffff;
+  --ink:#1f2937; --sub:#6b7280; --line:#e5e7eb;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px 80px;}
+header{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;padding:40px 0 30px;}
+header .wrap{padding-bottom:0;}
+header h1{font-size:28px;font-weight:700;}
+header p{opacity:.85;margin-top:6px;font-size:14px;}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border-radius:999px;padding:2px 12px;font-size:12px;margin-right:6px;margin-top:10px;}
+h2{font-size:20px;margin:26px 0 14px;display:flex;align-items:center;gap:8px;}
+h2::before{content:"";width:5px;height:20px;background:var(--blue);border-radius:3px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:14px;}
+.lesson{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px;background:#fff;transition:all .2s;}
+.lesson:hover{border-color:var(--blue);box-shadow:0 4px 14px rgba(37,99,235,.12);transform:translateY(-2px);}
+.lesson .lt{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+.lesson h3{font-size:17px;color:var(--blue);}
+.lesson .arrow{color:var(--sub);}
+.lesson p{font-size:13px;color:var(--sub);margin-top:6px;}
+.tag{display:inline-block;font-size:12px;padding:1px 10px;border-radius:999px;margin-right:6px;}
+.tag.b{background:#dbeafe;color:#1d4ed8;}
+.tag.g{background:#dcfce7;color:#15803d;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:720px){.grid2{grid-template-columns:1fr;}}
+.klist li{margin:6px 0 6px 18px;}
+footer{text-align:center;color:var(--sub);font-size:12px;margin-top:40px;}
+.stat{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;}
+.stat div{flex:1;min-width:120px;background:#f9fafb;border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-align:center;}
+.stat b{display:block;font-size:26px;color:var(--blue);}
+.stat span{font-size:12px;color:var(--sub);}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>📚 Hanna 英语复习站</h1>
+    <p>学生：Hanna（艾小小） · 老师：Mike · 目标：与外国人流畅沟通</p>
+    <div>
+      <span class="badge">教材：新概念英语 + 扇贝单词</span>
+      <span class="badge">频率：每周 3 节</span>
+      <span class="badge">规划周期：2 个月</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <h2>📊 学习总览</h2>
+  <div class="card">
+    <div class="stat">
+      <div><b>2</b><span>已上课程</span></div>
+      <div><b>24</b><span>闪卡单词</span></div>
+      <div><b>20</b><span>测验题目</span></div>
+      <div><b>~1400</b><span>两周词汇目标</span></div>
+    </div>
+  </div>
+
+  <h2>🗂️ 课程目录</h2>
+  <a class="lesson" href="lesson-1.html">
+    <div class="lt"><h3>📗 第 1 课（正式课）</h3><span class="arrow">进入复习 →</span></div>
+    <p><span class="tag g">最新</span><span class="tag b">特殊疑问句</span> 特殊疑问句进阶造句 · How 家族句型 · 接待外国客户实战模拟 · 14 张单词闪卡 · 14 题语法操练 · 10 题测验</p>
+  </a>
+  <a class="lesson" href="lesson-0-trial.html">
+    <div class="lt"><h3>📘 试听课</h3><span class="arrow">进入复习 →</span></div>
+    <p><span class="tag b">入门</span> 疑问句基础结构 · am/is/are 与 do/does/did · 学习规划制定 · 10 张单词闪卡 · 6 题操练 · 10 题测验</p>
+  </a>
+
+  <h2>🎯 阶段目标</h2>
+  <div class="grid2">
+    <div class="card">
+      <b>1 个月后</b>
+      <ul class="klist">
+        <li>特殊疑问句、一般疑问句流利提问</li>
+        <li>能主导与外国人的对话</li>
+      </ul>
+    </div>
+    <div class="card">
+      <b>2 个月后</b>
+      <ul class="klist">
+        <li>雅思口语 5.5–6 分水平</li>
+        <li>能用从句较流利地描述事情</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>📌 每日任务</h2>
+  <div class="card">
+    <ul class="klist">
+      <li><b>单词</b>：扇贝词表跟读 100 个 × 3 遍（只读不背）</li>
+      <li><b>新概念</b>：读 3 篇文章，先懂中文意思再读</li>
+      <li><b>听力</b>：先看懂文章 → 再听录音，不盲听</li>
+      <li><b>造句</b>：所学句型造 2~5 句，微信语音发老师，不用翻译</li>
+    </ul>
+  </div>
+
+  <footer>Hanna 英语复习站 · 用 GitHub Pages 托管 · 坚持开口，每天进步一点点 💪</footer>
+</div>
+</body>
+</html>
