@@ -357,12 +357,56 @@ const LESSONS=[
   {t:"课后作业",type:"homework",text:"① 中秋假期任务：把两张单词表（服装 25 词 + 课堂词）读熟背熟，节后检查；② 老师将发新的背单词打卡方法，按方法执行；③ 学过的单词不许忘——每个过关后才教新词；④ 六个核心句每天脱稿复述一遍；⑤ 下次上课改用平板/电脑，看得更清楚。"}
  ]
 }
+,
+{
+ id:7, date:"2026-09-28", title:"第七课：自我介绍 1.0 整段输出 + 中秋实战",
+ subtitle:"六句连成一段话 · 1分钟计时挑战 · and/but/so 描述节日",
+ sections:[
+  {t:"开场 · 用 and/but/so 描述中秋节",type:"dialog",lines:[
+   ["Mike","Have you had the moon cake? How was your Mid-Autumn Festival?"],
+   ["Hanna","I'm very glad to spend the festival because I had lunch with my family."],
+   ["Hanna","And there is a lot of good food, but I think I may get fat."],
+   ["Mike","So what do you want to do?"],
+   ["Hanna","So I want to eat less food in the next few days."],
+   ["Hanna","I want to go to Guangzhou in the next few days, too."]],
+   note:"语法点：① 长胖 get fat（get + 形容词，fat 本身不是动词）；② less food 不可数名词不加 s；③ in the next few days 接下来几天（next 的 t 发音很轻）；④ want to go to + 地点，go to 不能省。"},
+  {t:"自我介绍 1.0 · 整段短文（中译英 + 朗读）",type:"article",paras:[
+   ["Currently I am a fashion designer and this is my business. I originally wanted to develop abroad, but I stay in this industry.","我目前是一名时装设计师，这是我的事业。我本来想去国外发展，但我留在这个行业。"],
+   ["I have a design background. Recently I drew a lot of sketches and I especially like unique patterns.","我有设计背景。最近画了很多草图，尤其喜欢独特的图案。"],
+   ["Silk is very elegant, but it doesn't match casual styles. Cotton is very comfortable, so I recommend it.","丝绸很优雅，但不适合休闲款式。棉质面料很舒服，所以我推荐它。"]],
+   note:"这就是第六课六句的升级版——自我介绍 1.0！先逐句翻译，再四句连说，最后整段一口气读完。卡住的全是单词：originally / elegant / comfortable / recommend —— 单词熟练度决定流利度。"},
+  {t:"整段输出 · 三阶训练法",type:"list",items:[
+   "<b>第 1 阶 · 逐句：</b>一句一句翻译并说对，不急着连。",
+   "<b>第 2 阶 · 连句：</b>以 4 句为单位一口气说，中间不断。",
+   "<b>第 3 阶 · 整段计时：</b>整段一口气说完，目标 <b>1 分钟以内</b>（第一次 2 分钟 → 挑战 1 分钟）。",
+   "卡壳时就停下来把卡住的单词单独读 10 遍（捋一捋），再从头开始——<b>允许重来，直到流利</b>。",
+   "Mike 点评：语法已经不是问题，瓶颈在单词——<b>一定要每天读单词</b>！"],
+   },
+  {t:"句型复习 · 各课一句话回顾",type:"table",rows:[
+   ["第一课 · 特殊疑问句","What did you do today? / Which clothing style do you like the most?"],
+   ["第二课 · 一般疑问句","Are you satisfied with our proposal?（am/is/are 开头）"],
+   ["第四课 · 聊天破冰","What interesting experiences do you have recently?"],
+   ["第五课 · 描述一天","Today I feel very happy. I went to… at eleven.（四句话框架）"],
+   ["第六课 · 并列句","and 顺着说 / but 转折 / so 结论"],
+   ["第七课 · 整段输出","自我介绍 1.0 六句成段，1 分钟说完"]]},
+  {t:"为什么总想说最简单的词？",type:"list",items:[
+   "只用简单词就像做服装只用廉价材料交差——做多了会累、会无聊，没有成就感。",
+   "单词是子弹，语法是枪——子弹够多，才能聊出深度。",
+   "我们的目标：不是会说几个词，而是<b>讲得流利、讲得准确</b>。",
+   "7 天就能养成一个习惯：国庆每天 15 个单词打卡，Mike 每天督促！"]},
+  {t:"课后作业（国庆假期）",type:"homework",text:"① 每天 15 个单词打卡（国庆 7 天养成习惯，10 月坚持 30 天 = 掌握 400+ 会用的单词）；② 自我介绍 1.0 整段练到 1 分钟内流利说完；③ 每天打开复习网站读一遍各课句型；④ 国庆去广州看展、逛市场，抓住实战机会——遇到外国人就主动聊，回来分享经历；⑤ 国庆后课上说完剩下一段（自我介绍 2.0）。"}
+ ]
+}
 ];
 
 /* ================= 单词数据 =================
    ★★★ 新单词粘贴在这一行的上方 ★★★
    格式：{w:单词, p:音标, pos:词性, m:中文, e:例句, em:例句中文, cat:分类} */
 const WORDS=[
+{w:"mooncake",p:"/ˈmuːnkeɪk/",pos:"n.",m:"月饼",e:"Have you had the moon cake?",em:"你吃月饼了吗？",cat:"课堂"},
+{w:"festival",p:"/ˈfestɪvl/",pos:"n.",m:"节日",e:"How was your Mid-Autumn Festival?",em:"中秋节过得怎么样？",cat:"课堂"},
+{w:"less",p:"/les/",pos:"adj.",m:"更少的",e:"I want to eat less food in the next few days.",em:"接下来几天我想少吃一点。",cat:"课堂"},
+{w:"habit",p:"/ˈhæbɪt/",pos:"n.",m:"习惯",e:"It takes 7 days to build a habit.",em:"养成一个习惯需要 7 天。",cat:"课堂"},
 {w:"compensation",p:"/ˌkɒmpenˈseɪʃn/",pos:"n.",m:"赔偿；补偿",e:"They refused compensation for my car.",em:"他们拒绝赔付我的车。",cat:"课堂"},
 {w:"develop",p:"/dɪˈveləp/",pos:"v.",m:"发展；开发",e:"I want to develop my career abroad.",em:"我想去国外发展事业。",cat:"课堂"},
 {w:"development",p:"/dɪˈveləpmənt/",pos:"n.",m:"发展；开发",e:"The development of my career is important.",em:"我的职业发展很重要。",cat:"课堂"},
