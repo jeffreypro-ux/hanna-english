@@ -37,7 +37,7 @@ ul.lines{list-style:none}
 ul.lines li{padding:7px 0;border-bottom:1px solid #faf4ee;font-size:15px}
 ul.lines li:last-child{border-bottom:none}
 .en{color:var(--blue);font-weight:600}
-.tip{background:var(--soft);border-left:4px solid var(--brand2);border-radius:0 10px 10px 0;padding:12px 16px;font-size:14px;margin-top:10px;color:#6b5b4f}
+section.card.review{background:#f2f7f0;border-color:#dcead8;}section.card.review h3{color:var(--green);border-color:#dcead8;}section.card.review h3 .num{background:var(--green);}section.card.extra{background:#f2f6fa;border-color:#d9e5f0;}section.card.extra h3{color:var(--blue);border-color:#d9e5f0;}section.card.extra h3 .num{background:var(--blue);}.tip{background:var(--soft);border-left:4px solid var(--brand2);border-radius:0 10px 10px 0;padding:12px 16px;font-size:14px;margin-top:10px;color:#6b5b4f}
 .homework-box{background:#f2f7f0;border:1px solid #dcead8;border-radius:12px;padding:16px 20px;font-size:14.5px}
 .homework-box b{color:var(--green)}
 table.pairs{width:100%;border-collapse:collapse;font-size:14.5px}
@@ -124,6 +124,8 @@ const LESSONS=[
 {
  id:1, date:"2026-09-14", title:"第一课：开口破冰 + 特殊疑问句",
  subtitle:"特殊疑问词 What / Which / Who / Why / Where / How",
+ review:["① 句型表自测：遮住英文栏，看着中文逐句说出英文，说不上的标⭐，当天重练 3 遍。","② 疑问句口诀默写：疑问词 + 助动词/be动词 + 主语 + 动词…？默到脱口而出。","③ How 家族抽卡：在纸上写 how many / much / far / long / old / big / tall，自己随机说一个场景句。","④ 情景模拟：把接待客户对话分饰两角各读一遍，再替换产品词（裤子/外套）再造一轮。","⑤ 间隔复习：今天 → 3 天后 → 1 周后各过一遍，比一次性背 10 遍有效得多。"],
+ extra:["<b>which vs what 一句话辨析：</b>which 是在有限选项里挑（which one?），what 是开放式提问。","<b>助动词一览：</b>do（我/你/复数）does（他/她/单数）did（过去式）——后面永远跟动词原形。","<b>How come?</b> = Why？更口语：How come you are late? 你怎么迟到了？","<b>易错点：</b>How much is this car? 主语是 this car（物），用 is；问人用 How much does it cost?"],
  sections:[
   {t:"开场热身",type:"dialog",lines:[
    ["Mike","How are you? How about your day?"],
@@ -175,6 +177,8 @@ const LESSONS=[
 {
  id:2, date:"2026-09-16", title:"第二课：一般疑问句 + 商务请求",
  subtitle:"Yes / No 问句 · be动词 / do·does / 情态动词 can·could·would·should·will·shall",
+ review:["① 三开头口诀自测：be 动词 / do·does / 情态动词，随机抽一个中文句，说出用哪个开头并造句。","② 8 组商务句型中英互译：先中译英，隔天英译中，双向都要快。","③ 造句打卡升级版：每天用 could / would / should 各造 1 句发给老师，连续一周。","④ 语气强弱排序练习：把 Can you…? / Could you…? / Would you…? 按礼貌程度排序并体会差别。"],
+ extra:["<b>情态动词礼貌度阶梯：</b>can（直接）< could < would < may（最委婉），商务场合往上走一格总没错。","<b>请求万能公式：</b>Could you + 动词原形 …, please? 几乎适用于一切商务请求。","<b>-ed 形容词 vs -ing 形容词：</b>I am satisfied（我感到满意）/ It is satisfying（这事令人满意），主语是人用 -ed，是物用 -ing。","<b>发音提示：</b>proposal 重音在第二音节 pro-PO-sal；requirement 词尾 -ment 轻读。"],
  sections:[
   {t:"课文朗读 · Breakfast or Lunch?（新概念二 L2）",type:"article",paras:[
    ["It was Sunday. I never get up early on Sundays. I sometimes stay in bed until lunchtime. Last Sunday I got up very late.","那是星期天。星期天我从不早起，有时一直躺到吃午饭。上星期天我起得很晚。"],
@@ -224,6 +228,8 @@ const LESSONS=[
 {
  id:4, date:"2026-09-20", title:"第四课：新词汇 + 与外国朋友实战",
  subtitle:"自我介绍 · 沟通技巧（重复对方 + 给感受 + 追问）",
+ review:["① 必背三句话 + 自我介绍四句：每天早上洗脸时背一遍，录一次音，一周后对比流利度。","② 单词「两英一中」：每天 10 个，先英后中，节奏要快。","③ 实战任务：本周至少找 1 次和外国人说话的机会，只问 3 个问题也算成功，回来复盘。","④ 二次确认练习：让朋友说一句英文，你练习重复对方 + 给感受 + 追问。"],
+ extra:["<b>small talk 安全话题：</b>天气、食物、旅行、爱好——第一次见面别问收入和年龄。","<b>自我介绍升级版模板：</b>I am from + 城市. / Currently I work in + 行业. / My background is + 专业. / I can only speak a little English.","<b>情绪词梯度：</b>not good → upset → annoyed → angry（逐级加强，精确表达你的程度）。","<b>没听清的分级应对：</b>Sorry?（没听清）→ Can you say it again?（请再说一遍）→ I don't know what you mean.（真的不懂）。"],
  sections:[
   {t:"热身对话 · 聊日常习惯",type:"dialog",lines:[
    ["Mike","When do you usually get up?"],
@@ -269,6 +275,8 @@ const LESSONS=[
 {
  id:5, date:"2026-09-21", title:"第五课：实战复盘 + 「描述一天」四句话框架",
  subtitle:"Less is more 少而准确 · 陈述句框架 · 朗读重音节奏",
+ review:["① 四句话框架每日口头练：早上说 today 版，晚上说 yesterday 版，一天不落。","② 重音朗读：拿课文用荧光笔标出动词，重读动词、轻读其他，录下来对比原音。","③ 脱稿复述：看关键词（感受/事件/缘由/计划）不看句子，复述 Mike 的示范段。","④ 造句迁移：把示范段里的「修车」换成你真实的某件事（见客户/看展），说一遍。"],
+ extra:["<b>语音冷知识：</b>英语是「重音计时」语言——句子快慢由重音词决定，重音词之间无论几个轻读词都算一拍；中文是「音节计时」，所以逐字读英文会很怪。","<b>弱读清单：</b>a / of / to / and 在句中通常轻读成 /ə/ /əv/ /tə/，这是听力的关键。","<b>建议开始写英语日记：</b>每天 3-4 句（就是四句话框架），写一周就能明显感觉口语变顺。","<b>百分数读法：</b>50% = fifty percent，别读成 fifty percents（不加 s）。"],
  sections:[
   {t:"实战复盘 · 第一次和外国朋友聊天",type:"dialog",lines:[
    ["Mike","How are you today?"],
@@ -315,6 +323,8 @@ const LESSONS=[
 {
  id:6, date:"2026-09-23", title:"第六课：并列句 and / but / so + 副词的位置",
  subtitle:"简单句+连接词=流利口语 · 造句大练兵",
+ review:["① 六句核心句默写：看中文写英文，连续 3 天全对才算过关。","② 连词成段练习：写 3 个短句，分别用 and / but / so 连成一段话，发给老师。","③ 副词位置填空：给 5 个句子，把 currently / originally / recently 放到正确位置。","④ 语法判断口诀演练：拿到任何陈述句，先判断主系表还是主谓宾，再说出口。"],
+ extra:["<b>判断口诀：</b>句子里有「是/在/变得」→ 主系表（用 am/is/are）；有「做/吃/买/卖」→ 主谓宾（用 do/does）。","<b>连接词进阶：</b>or（或者）、so that（以便）、however（然而，书面）、while（而/当）。","<b>易错点：</b>although 和 but 二选一，不能连用；because 和 so 也不能连用。","<b>develop 家族：</b>develop（v. 发展）→ development（n. 发展）→ developed（adj. 发达的）→ developing（adj. 发展中的）。"],
  sections:[
   {t:"热身 · 用「四句话框架」说今天",type:"dialog",lines:[
    ["Mike","What did you do today? Could you tell me more?"],
@@ -361,6 +371,8 @@ const LESSONS=[
 {
  id:7, date:"2026-09-28", title:"第七课：自我介绍 1.0 整段输出 + 中秋实战",
  subtitle:"六句连成一段话 · 1分钟计时挑战 · and/but/so 描述节日",
+ review:["① 关键词法练新话题：用同样的方法准备 2 个新话题（我的公司 / 我的爱好），每个列 4-6 个关键词。","② 1 分钟计时挑战：每周录一次演讲，目标是比上周快 10 秒。","③ 范文跟读 3 遍法：第 1 遍看稿跟读，第 2 遍半脱稿，第 3 遍只看关键词。","④ 改说练习：找 3 个中文成语（如「人山人海」），练习用简单英语解释。"],
+ extra:["<b>演讲万能结构 PREP：</b>Point（观点）→ Reason（原因）→ Example（例子）→ Point（重复观点），1 分钟刚刚好。","<b>up and downs 的姐妹表达：</b>ups and downs of life 人生的起起落落 / sweet and bitter 苦与甜。","<b>「人山人海」怎么说？</b>There are crowds of people. / It's packed.（被塞满了）","<b>数字加分技巧：</b>演讲里加数字更可信，如 We export to 12 countries."],
  sections:[
   {t:"开场 · 用 and/but/so 描述中秋节",type:"dialog",lines:[
    ["Mike","Have you had the moon cake? How was your Mid-Autumn Festival?"],
@@ -401,6 +413,8 @@ const LESSONS=[
 {
  id:8, date:"2026-10-09", title:"第八课：场景英语 · 咖啡厅点单 + 酒店入住",
  subtitle:"假期复盘 · 三大复习测试 · 日常场景模拟",
+ review:["① 场景卡片记忆：把咖啡厅/酒店单词做成卡片，正面中文背面英文，每天抽 10 张。","② 角色扮演：两个场景各演 2 遍，第 2 遍替换 3 个词（latte→americano、double room→twin room）。","③ 录音对比：把模拟对话录下来，和网站 🔊 发音对比，找出差距最大的 3 句重练。","④ 实战打卡：下次去咖啡厅/酒店，至少用 3 句课堂句型，说完给自己打勾。"],
+ extra:["<b>咖啡文化：</b>espresso 来自意大利语「快速」；美式 americano 是浓缩兑水，传说与二战美军有关。","<b>pay 的搭配矩阵：</b>pay by cash / by card / by phone / by QR code；pay for the bill（为账单付款）。","<b>酒店进阶词：</b>luggage storage 行李寄存 / room service 客房服务 / late check-out 延迟退房。","<b>易错点：</b>for here or to go 是「堂食还是带走」，to go 中间不加横杠。"],
  sections:[
   {t:"开场 · 国庆假期复盘",type:"dialog",lines:[
    ["Mike","Long time no see! How was your holiday?"],
@@ -473,6 +487,8 @@ const LESSONS=[
 {
  id:9, date:"2026-10-14", title:"第九课：超市结账场景 + 定语/状语从句入门",
  subtitle:"Is there any discount? · who / which / that · when / because / if / although",
+ review:["① 超市句型实战：下次购物心里默念 How much is this? / Is there any discount?","② 长句拆分练习：把定语从句例句拆成两个简单句，再合回去（如 The designer who creates this dress is my teacher. → 拆两句）。","③ 四连词日记：每天用 when / because / if / although 各写 1 句，写满一周。","④ 解释策略演练：故意挑 3 个不会的中文词，练习用简单英语向朋友解释。"],
+ extra:["<b>定语从句 vs 状语从句一句话：</b>定语从句修饰名词（放名词后，无逗号）；状语从句修饰整句（常带逗号，可放句首句尾）。","<b>关系词速查表：</b>人→who/that；物→which/that；所属→whose（如 the girl whose dress is red）。","<b>there be 句型家族：</b>There is + 单数 / There are + 复数 / Is there any…? / There was…（过去式）。","<b>超市高频词补充：</b>weigh 称重 / scale 秤 / shopping list 购物清单 / express lane 快速通道。"],
  sections:[
   {t:"热身 · 用英语倾诉一件事",type:"dialog",lines:[
    ["Mike","How do you feel today? Do you have anything to share with me?"],
@@ -540,6 +556,8 @@ const LESSONS=[
 {
  id:10, date:"2026-10-16", title:"第十课：演讲训练 ① · 描述你的家乡",
  subtitle:"1分钟演讲法 · 关键词法 · 不会说的词「改说」技巧",
+ review:["① 演讲三遍法：读顺 → 半脱稿 → 计时脱稿，每遍录下来，选最好的一版发给老师。","② 关键词自测：看着 6 个关键词（Qingdao/beach/German buildings/beer/seasons/sea）不看稿说全文。","③ 换话题套用：用同样的关键词法准备「我的公司」，结构照搬：城市→特色→数据→感受→结尾。","④ 每周重录：同一篇每周录一次，感受自己的进步，存档对比。"],
+ extra:["<b>演讲万能开头：</b>I am going to talk about… / Let me tell you about… / Today I'd like to share…","<b>演讲万能结尾：</b>That's all about… / Thank you for listening. / I hope you like it.","<b>连接词进阶：</b>firstly / secondly / moreover（而且）/ for example / in a word（总之）。","<b>数字表达：</b>thousands of people 数以千计 / hundreds of years 数百年——约数用复数+of。"],
  sections:[
   {t:"开场 · 聊周末计划",type:"dialog",lines:[
    ["Mike","How do you plan your weekend?"],
@@ -583,12 +601,65 @@ const LESSONS=[
   {t:"课后安排",type:"homework",text:"① 本周先休息，不背新单词；② 把「描述家乡」演讲稿练到脱稿 1 分钟内流利说完，语音发给老师；③ 下周一老师发定制的实用单词表（专为和外国人聊天设计），打印出来边运动边晨读；④ 接下来三节课都是演讲训练，共 11 个话题——目标是能脱稿完成任意话题的演讲！"}
  ]
 }
+,
+{
+ id:11, date:"2026-10-19", title:"第十一课：定语从句细讲 + 状语从句实战",
+ subtitle:"that 可省略 · 产品描述四连句 · 听不懂口音怎么办",
+ review:["① that 省略判断：给 5 个句子，判断 that 能不能省，说出理由（看 that 在从句中是不是主语）。","② 销售四连句背诵：这是能直接用在客户身上的话术，背到脱口而出。","③ 晨读打卡：每天 20 分钟读 300 词例句，读完微信说「今日晨读已打卡」。","④ 反问练习：让朋友故意说快/说含糊，你练习 Can you say it again? / Do you mean…?"],
+ extra:["<b>关系代词完整表：</b>who（人，主格）/ whom（人，宾格，口语少用）/ whose（所属）/ which（物）/ that（通用）。","<b>whose 例句：</b>The girl whose dress is red is my sister. 穿红裙子的女孩是我妹妹。","<b>销售英语扩展 3 句：</b>We stand behind our quality. 我们对质量负责。/ No worries — take your time. 不急，慢慢看。/ Feel free to contact me anytime. 随时联系我。","<b>always 的位置：</b>be 动词后（I am always here）/ 实义动词前（I always provide）——唯独不放句尾。"],
+ sections:[
+  {t:"开场 · 周末旅行复盘（崂山取水）",type:"dialog",lines:[
+   ["Mike","Why are you late for class?"],
+   ["Hanna","I drove my mom and sister to a mountain. We went to a water factory to take some natural water."],
+   ["Mike","How was the trip? Tell me more — use and, but, so or although."],
+   ["Hanna","It was very good, and a bit tiring."],
+   ["Mike","Don\'t forget the subject! Try again."],
+   ["Hanna","We went to a water factory to take natural water. Although it was quite tiring, we had a happy time."]],
+   note:"① although 后面不加 but；② feel 是动词「感觉」（I feel tired），feeling 是名词「感受」；③ 描述旅行先讲经过，别急着下结论。"},
+  {t:"实战技巧 · 遇到口音重的外国人怎么办",type:"list",items:[
+   "口音（accent）没办法，只能请对方说慢点：委婉版本——",
+   "<b>Can you say it again?</b> / <b>Can you tell me again?</b> 你能再说一遍吗？（朋友间不用说 pardon，太见外）",
+   "<b>What do you mean?</b> 你什么意思？（实在听不耐烦了可以用）",
+   "<b>Do you mean…?</b> + 你的猜测：Do you mean we go to the supermarket? 你是指我们要去超市吗？",
+   "流程：先反问猜 → 还不懂 → 再求助翻译。多练！"],
+   },
+  {t:"核心语法 · 定语从句细讲",type:"list",items:[
+   "<b>that 最万能</b>：指人指物都可以，口语里最常用；who 特指人；which 偏书面。",
+   "<b>口语大秘诀：that 常常可以省略！</b><span class='en'>This is the sketch (that) I finished last week.</span> 这是我上周完成的草图。",
+   "<b>不能省略的情况：</b>that 在从句里作主语时不能省（后面接 is / we 等人称主语时反而能省——记例句就好）。",
+   "<b>三步造句法：</b>① 先说先行词（重点前置！）② 关系词 + 从句 ③ 主句剩余部分。",
+   "例：<span class='en'>The designer who designs those dresses is my teacher.</span>（先说 the designer）",
+   "例：<span class='en'>The travel agency that we met at the show.</span>（展会上遇到的旅行社）",
+   "<b>下一周要做的连衣裙：</b><span class='en'>This is the dress I will make next week.</span>（that 省略，will 加了更好）"]},
+  {t:"核心语法 · 状语从句实战（产品描述四连句）",type:"dialog",lines:[
+   ["Hanna","This dress is the best in our company."],
+   ["Hanna","If the dress is not good quality, we will return it for free.（for free 免费）"],
+   ["Hanna","Although you don't buy it, it's no problem for us.（for us 对我们来说）"],
+   ["Hanna","Because we always provide the best service for you.（always 总是）"],
+   ["Hanna","When you want to buy it in the future, I will always be here."]],
+   note:"万能销售话术框架：产品好 → if 质量不好免费退 → although 不买也没关系 → because 我们始终提供最好服务 → when 你未来想买我一直都在。"},
+  {t:"话题挑战 · 我最大的挑战",type:"dialog",lines:[
+   ["Mike","Use if and when to talk about your biggest challenge."],
+   ["Hanna","If I study English well, it is very important for my life and work."],
+   ["Hanna","When my foreign friends come to China, I will be the best tour guide for them."]],
+   note:"新词：tour guide 导游；challenge 挑战。be the best … for them 成为对他们来说最好的……"},
+  {t:"课后作业",type:"homework",text:"① 每天晨读 300 个必备单词 20 分钟，读完微信打卡「今日晨读已打卡」；② 注意：不要只看单词——要读例句！很多词看着认识，说不出口；③ 定语从句 5 个例句 + 状语从句四连句练熟，下节课抽查；④ 用 if / when 各造 1 句关于自己真实生活的句子。"}
+ ]
+}
 ];
 
 /* ================= 单词数据 =================
    ★★★ 新单词粘贴在这一行的上方 ★★★
    格式：{w:单词, p:音标, pos:词性, m:中文, e:例句, em:例句中文, cat:分类} */
 const WORDS=[
+{w:"natural",p:"/ˈnætʃrəl/",pos:"adj.",m:"天然的；自然的",e:"We took some natural water from the mountain.",em:"我们从山上打了些天然水。",cat:"课堂"},
+{w:"tiring",p:"/ˈtaɪərɪŋ/",pos:"adj.",m:"累人的",e:"The trip was a bit tiring but fun.",em:"旅途有点累但很开心。",cat:"课堂"},
+{w:"agency",p:"/ˈeɪdʒənsi/",pos:"n.",m:"公司；机构",e:"The travel agency that we met at the show.",em:"我们在展会上遇到的那家旅行社。",cat:"课堂"},
+{w:"future",p:"/ˈfjuːtʃə/",pos:"n./adj.",m:"未来（的）",e:"When you want to buy it in the future, I will always be here.",em:"未来你想买的时候，我一直都在。",cat:"课堂"},
+{w:"challenge",p:"/ˈtʃælɪndʒ/",pos:"n./v.",m:"挑战",e:"My biggest challenge is learning English.",em:"我最大的挑战是学英语。",cat:"课堂"},
+{w:"service",p:"/ˈsɜːvɪs/",pos:"n.",m:"服务",e:"Because we always provide the best service for you.",em:"因为我们始终为您提供最好的服务。",cat:"课堂"},
+{w:"for free",p:"/fɔː friː/",pos:"phr.",m:"免费",e:"If the quality is not good, we will return it for free.",em:"如果质量不好，我们免费退货。",cat:"课堂"},
+{w:"tour guide",p:"/tʊə ɡaɪd/",pos:"n.",m:"导游",e:"I will be the best tour guide for them.",em:"我会成为他们最好的导游。",cat:"课堂"},
 {w:"seafood",p:"/ˈsiːfuːd/",pos:"n.",m:"海鲜",e:"I want to buy fresh seafood.",em:"我想买新鲜的海鲜。",cat:"课堂"},
 {w:"beach",p:"/biːtʃ/",pos:"n.",m:"海滩",e:"My hometown is a beautiful beach city.",em:"我的家乡是美丽的海滨城市。",cat:"课堂"},
 {w:"climate",p:"/ˈklaɪmət/",pos:"n.",m:"气候",e:"The climate here is very comfortable.",em:"这里的气候很舒服。",cat:"课堂"},
@@ -757,6 +828,14 @@ function renderHome(){
    '<li>✅ 每课用学过的句型造 2 个句子，微信语音发给 Mike 老师</li>'+
    '<li>✅ 抓住每一次和外国人聊天的机会实战：重复对方 + 给感受 + 顺着追问</li>'+
   '</ul></section>'+
+  '<section class="card"><h3><span class="num">🧭</span>高效复习法（每天 20 分钟）</h3>'+
+  '<ul class="lines">'+
+   '<li>🌅 <b>早上 10 分钟</b>：晨读 300 个必备单词 15-20 个，读例句不只看词，读完打卡</li>'+
+   '<li>🎧 <b>碎片时间</b>：点开当天的课程笔记，把所有 🔊 例句跟读一遍</li>'+
+   '<li>✍️ <b>晚上 10 分钟</b>：按该课的「🎯 复习指南」完成一项自测（默写 / 遮住翻译说英文 / 录音）</li>'+
+   '<li>📅 <b>间隔复习</b>：每课在 3 天后、1 周后各重过一遍——比一次性背 10 遍有效</li>'+
+   '<li>🗣️ <b>周末输出</b>：用当周学过的句型录一段 1 分钟自由表达，发给老师</li>'+
+  '</ul></section>'+
   '<div class="update-note">📌 <b>老师如何更新本网站：</b>打开 <code>index.html</code>，搜索 <code>★★★ 新课程粘贴在这一行</code>，按数据格式粘贴新课程；搜索 <code>★★★ 新单词粘贴在这一行</code> 添加单词（支持 w/p/pos/m/e/em/cat 字段），保存即可自动出现在网站上。</div>';
 }
 function secHtml(s){
@@ -790,6 +869,8 @@ function renderLesson(id){
     body='<div class="pending"><div class="big">📼</div><h3 style="color:var(--brand);margin-bottom:8px">这节课没有录制回放</h3><p style="font-size:14px;color:#7a6a5e">第三课当时忘记开启录制了 😅<br>等 Hanna 回忆课堂内容、或老师补充笔记后，会第一时间更新到这里。<br><br>可以先去复习 <a href="#/lesson/2" data-go="#/lesson/2" style="color:var(--brand);font-weight:600">第二课 →</a> <a href="#/lesson/4" data-go="#/lesson/4" style="color:var(--brand);font-weight:600">第四课 →</a></p></div>';
   }else{
     body=l.sections.map(secHtml).join("");
+    if(l.review){body+='<section class="card review"><h3><span class="num">🎯</span>本课复习指南 · 怎么练才记得牢</h3><ul class="lines">'+l.review.map(i=>"<li>"+i+"</li>").join("")+"</ul></section>";}
+    if(l.extra){body+='<section class="card extra"><h3><span class="num">📚</span>知识加餐 · 课堂没细讲的补充</h3><ul class="lines">'+l.extra.map(i=>"<li>"+i+"</li>").join("")+"</ul></section>";}
   }
   const prev=LESSONS.find(x=>x.id===id-1),next=LESSONS.find(x=>x.id===id+1);
   let pager='<div style="display:flex;gap:10px;margin-top:6px">'+
