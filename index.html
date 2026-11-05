@@ -18,6 +18,9 @@ aside{width:230px;flex-shrink:0;background:linear-gradient(180deg,#fff7f1,#fdeee
 .logo{padding:0 22px 18px;border-bottom:1px dashed var(--line)}
 .logo h1{font-size:20px;color:var(--brand)}
 .logo p{font-size:12px;color:var(--sub);margin-top:4px}
+.replay{padding:2px 16px 0;}
+.replay a{display:block;text-align:center;background:linear-gradient(135deg,#e2725b,#f4a988);color:#fff;font-weight:700;font-size:14.5px;padding:11px;border-radius:12px;box-shadow:0 3px 10px rgba(226,114,91,.35);transition:.15s;}
+.replay a:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(226,114,91,.45);}
 nav{padding:14px 12px;display:flex;flex-direction:column;gap:4px}
 nav .navtitle{font-size:11px;color:var(--sub);padding:10px 10px 4px;letter-spacing:2px}
 nav a{padding:9px 14px;border-radius:10px;font-size:14px;display:flex;align-items:center;gap:8px;transition:.15s}
@@ -83,6 +86,7 @@ code{background:var(--soft);padding:1px 6px;border-radius:5px;font-size:12px;col
 <div class="layout">
 <aside>
   <div class="logo"><h1>🌸 Hanna 英语复习站</h1><p>服装外贸 · 口语提升 · Mike 老师</p></div>
+  <div class="replay"><a href="https://my.feishu.cn/drive/folder/HGRqfC2ialcw6RdoVnpcPYbjn6K?from=space_personal_filelist" target="_blank" rel="noopener">📼 课程回放</a></div>
   <nav id="nav"></nav>
 </aside>
 <main id="app"></main>
@@ -847,12 +851,71 @@ const LESSONS=[
   {t:"课后作业",type:"homework",text:"① 背熟自我介绍三段式（基本信息+兴趣+性格），下节课抽查——没背熟就陪你背！② 上周的朋友演讲稿重新背到脱口而出；③ 每天 5 词 5 句继续；④ 自我介绍录一版语音发给老师。"}
  ]
 }
+,
+{
+ id:17, date:"2026-11-04", title:"第十七课：见面五连问 + 听歌学口语",
+ subtitle:"How was your day? · How long do you stay? · 听不懂就大方说",
+ review:["① 自我介绍+朋友演讲+自控力三篇滚动复习：每天抽一篇脱稿说，说到不卡为止。","② 见面五连问背熟，找时间对着镜子自问自答一遍（想象对方怎么答）。","③ 模拟对话练第二轮「即兴回应」——听完对方的话，先回应一句再提问。","④ 选一首喜欢的英文歌（推荐打雷姐这类慢歌），本周学会副歌部分，注意连读。"],
+ extra:["<b>How was your day? 怎么答：</b>别说 I'm fine（显得冷漠！）——用 I'm good / pretty good / not bad。","<b>多少次 vs 多久一次：</b>How many times do you come to China?（问次数）；How often do you...?（问频率）。","<b>只有 how long，没有 how long time：</b>How long do you stay here? 你待多久？","<b>我本来……：</b>I thought...（think 的过去式）——I thought to develop abroad. 我本来想去国外发展。","<b>唱歌为什么练口语：</b>歌词全是连读和口语表达，旋律帮助记忆——学会一首顶练十段对话。"],
+ sections:[
+  {t:"开场 · 复习三连抽查（全过关！）",type:"dialog",lines:[
+   ["Mike","Review Monday\'s self-introduction!"],
+   ["Hanna","Hello guys, you can call me Hanna. I live in Qingdao, China. The things I usually like doing in my spare time are sports, like I enjoy going to the gym to lift dumbbells... I am an easy-going girl."],
+   ["Mike","And your best friend Zhang Xia?"],
+   ["Hanna","She is very kind. When I work overtime so late, she still cooks for me... we grew up together. She is my best friend."],
+   ["Mike","Self control — two or three sentences, in your own words."],
+   ["Hanna","I think self control is my best habit. When I want to give up, self control pushes me up. My self control is not good enough, but I will keep up."]],
+   note:"进步明显！三篇都能顺下来了。新表达：pushes me up 推我一把 / is not good enough 还不够好 / give up 放弃。"},
+  {t:"自我介绍 1.0 复刻 + 新表达",type:"article",paras:[
+   ["I am a fashion designer and I work in Qingdao.","我是一名服装设计师，在青岛工作。"],
+   ["I thought to develop abroad, but now I want to stay here.","我本来想去国外发展，但现在我想留在这里。（I thought = 我本来）"],
+   ["I am an easy-going girl. I usually love to make someone laugh.","我是个随和的女孩，平时喜欢逗人笑。（make someone laugh 让人笑）"],
+   ["I hope we can have a good relationship.","希望我们能好好相处。"]],
+   note:"第八课自我介绍复刻升级版——见新朋友直接拿去用！"},
+  {t:"核心训练 · 第一次见面五连问",type:"table",rows:[
+   ["今天过得怎么样？","How was your day?（回答用 I'm good，别用 I'm fine！）"],
+   ["你以前来过中国吗？","Have you been in China before?（现在完成时）"],
+   ["你到中国来几次了？","How many times do you come to China?（问次数）"],
+   ["你在中国有业务吗？","Do you have business in China?（business 生意/业务）"],
+   ["你会在这里待多久？","How long do you stay here?（只有 how long，没有 how long time！）"]]},
+  {t:"情景模拟 · 两轮对话（第二轮即兴回应）",type:"dialog",lines:[
+   ["Hanna","Hey Mike, how was your day?"],
+   ["Mike","Pretty good, Hanna. How about you?"],
+   ["Hanna","I'm good, thank you. Have you been in China before?"],
+   ["Mike","Yes, last year I came to China."],
+   ["Hanna","How many times do you come to China?"],
+   ["Mike","Maybe five times — I open a company doing export business, so I buy things in China and sell them in my country."],
+   ["Hanna","I'm very glad to hear that. How long do you stay here?"],
+   ["Mike","About two weeks. Do you have any good places to recommend?"],
+   ["Hanna","Sorry, please say again.（听不懂就大方问！）"],
+   ["Mike","Do you have any recommendation for fun places?"],
+   ["Hanna","I think you may like Shanghai... or Yunnan!"]],
+   note:"第二轮关键：对方答完要<b>先回应一句</b>（I'm very glad to hear that）再接着问——不能连珠炮只提问。"},
+  {t:"听不懂 · honest 原则",type:"list",items:[
+   "大方说：Sorry, I don't understand because my listening is not good. / Can you speak slowly?",
+   "对方<b>不会介意</b>——他们也不会说中文呢！",
+   "<b>不懂装懂才尴尬</b>；真诚反而能测试对方有没有耐心。",
+   "对朋友、对亲密关系都适用：没耐心的人，关系也不会长久。",
+   "你自己说过要 honest——那就从「承认听不懂」开始。"]},
+  {t:"听歌学口语 · Summertime Sadness",type:"article",paras:[
+   ["My God, I feel it in the air.","天呐，我感受得到这气息。（feel it 连读成 fee-ling）"],
+   ["Telephone wires above us are singing like a snare.","头顶的电话线像陷阱一样嗡鸣。（wires above us / singing like 都要连读）"]],
+   note:"选一首慢歌（推荐 Lana Del Rey），学会副歌。歌词里全是连读和口语表达，旋律帮你记住它们——没事哼一哼，口语语感自然来。"},
+  {t:"课后作业",type:"homework",text:"① 见面五连问背熟，自问自答演练（含回应对方+追问）；② 本周学会一首英文歌的副歌，注意连读；③ 三篇演讲滚动复习每天一篇；④ 每天 5 词 5 句继续！"}
+ ]
+}
 ];
 
 /* ================= 单词数据 =================
    ★★★ 新单词粘贴在这一行的上方 ★★★
    格式：{w:单词, p:音标, pos:词性, m:中文, e:例句, em:例句中文, cat:分类} */
 const WORDS=[
+{w:"laugh",p:"/lɑːf/",pos:"v./n.",m:"笑；大笑",e:"I usually love to make someone laugh.",em:"我平时喜欢逗人笑。",cat:"课堂"},
+{w:"honest",p:"/ˈɒnɪst/",pos:"adj.",m:"坦诚的",e:"I hope we can have an honest relationship.",em:"希望我们能坦诚相处。",cat:"课堂"},
+{w:"recommendation",p:"/ˌrekəmenˈdeɪʃn/",pos:"n.",m:"推荐",e:"Do you have any recommendation for fun places?",em:"有什么好玩的地方推荐吗？",cat:"课堂"},
+{w:"export",p:"/ˈekspɔːt/",pos:"n./v.",m:"出口",e:"I do some export business.",em:"我做出口生意。",cat:"课堂"},
+{w:"wire",p:"/ˈwaɪə/",pos:"n.",m:"电线",e:"Telephone wires above us are singing like a snare.",em:"头顶的电话线像陷阱一样嗡鸣。",cat:"课堂"},
+{w:"give up",p:"/ɡɪv ʌp/",pos:"phr.",m:"放弃",e:"When I want to give up, self control pushes me up.",em:"当我想放弃时，自控力推我一把。",cat:"课堂"},
 {w:"cousin",p:"/ˈkʌzn/",pos:"n.",m:"堂/表兄弟姐妹",e:"I went shopping with my cousin.",em:"我和表姐去逛街了。",cat:"课堂"},
 {w:"spare time",p:"/speə taɪm/",pos:"n.",m:"空余时间",e:"The things I like doing in my spare time are sports.",em:"我空余时间喜欢做的事情是运动。",cat:"课堂"},
 {w:"gym",p:"/dʒɪm/",pos:"n.",m:"健身房",e:"I enjoy going to the gym to lift dumbbells.",em:"我喜欢去健身房举哑铃。",cat:"课堂"},
@@ -1059,6 +1122,7 @@ function renderHome(){
   app.innerHTML=
   '<div class="hero"><h2>Hi Hanna！👋 开始复习吧</h2>'+
   '<p>这里是你的专属英语复习站：每节课的笔记、句型、对话都在左边菜单里；生词本可以点 🔊 随时听发音、看例句。每天坚持开口读，进步看得见！</p>'+
+  '<div style="margin-top:18px"><a href="https://my.feishu.cn/drive/folder/HGRqfC2ialcw6RdoVnpcPYbjn6K?from=space_personal_filelist" target="_blank" rel="noopener" style="display:inline-block;background:#fff;color:var(--brand);font-weight:700;font-size:14px;padding:10px 26px;border-radius:99px;border:2px solid var(--brand);text-decoration:none">📼 观看课程回放（飞云文档）</a></div>'+
   '<div class="stat">'+
     '<div><b>'+LESSONS.filter(l=>!l.pending).length+'</b><span>已更新课程</span></div>'+
     '<div><b>'+WORDS.length+'</b><span>生词</span></div>'+
