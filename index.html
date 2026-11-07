@@ -21,6 +21,8 @@ aside{width:230px;flex-shrink:0;background:linear-gradient(180deg,#fff7f1,#fdeee
 .replay{padding:2px 16px 0;}
 .replay a{display:block;text-align:center;background:linear-gradient(135deg,#e2725b,#f4a988);color:#fff;font-weight:700;font-size:14.5px;padding:11px;border-radius:12px;box-shadow:0 3px 10px rgba(226,114,91,.35);transition:.15s;}
 .replay a:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(226,114,91,.45);}
+.lesson-img{width:100%;border-radius:10px;margin:2px 0 10px;display:block;}
+.hero-img{width:100%;border-radius:14px;margin-top:16px;display:block;box-shadow:0 4px 14px rgba(0,0,0,.08);}
 nav{padding:14px 12px;display:flex;flex-direction:column;gap:4px}
 nav .navtitle{font-size:11px;color:var(--sub);padding:10px 10px 4px;letter-spacing:2px}
 nav a{padding:9px 14px;border-radius:10px;font-size:14px;display:flex;align-items:center;gap:8px;transition:.15s}
@@ -904,12 +906,55 @@ const LESSONS=[
   {t:"课后作业",type:"homework",text:"① 见面五连问背熟，自问自答演练（含回应对方+追问）；② 本周学会一首英文歌的副歌，注意连读；③ 三篇演讲滚动复习每天一篇；④ 每天 5 词 5 句继续！"}
  ]
 }
+,
+{
+ id:18, date:"2026-11-06", title:"第十八课：假想话题 · 回到 18 岁对自己说",
+ subtitle:"If I went back to 18... · would 虚拟语气 · as much as I can",
+ review:["① 演讲稿 5 句练到脱稿：先按语块读 3 遍，再整段计时说。","② 语法自查：would 代替 will（假想）、stop doing、副词 firmly 修饰 tell、名词前 the understanding。","③ 造句练习：用 would 写 2 句「如果我有时间机器」的假想句；用 as much as I can 写 1 句。","④ 每天 5 词 5 句继续，周末把本周话题背下来——下周课继续！"],
+ extra:["<b>虚拟语气入门：</b>与事实相反的假设 → if 从句用过去式，主句用 would——If I went back to 18, I would tell myself...（真实情况是回不去）。","<b>stop doing vs stop to do：</b>stop wasting time 停止浪费时间（不做某事）；stop to think 停下来去思考（停下来去做另一件事）。","<b>as much as I can：</b>尽我所能——I share their pressure as much as I can. 类似的还有 as long as 只要。","<b>pressure vs stress：</b>pressure 客观环境造成的压力（难以避免）；stress 多来自个人选择，可以自己调节。","<b>That's what... 表语从句：</b>That's what I want to say. 这就是我想说的（what 引导从句作表语）。"],
+ sections:[
+  {t:"开场 · 淄博出差",type:"dialog",lines:[
+   ["Mike","Are you on a business trip? Where are you now?"],
+   ["Hanna","I'm in Zibo. You know the city?"],
+   ["Mike","Sure — Zibo barbecue is very famous! You must try it."],
+   ["Hanna","Yes, we just finished the barbecue."]],
+   note:"新词：barbecue 烧烤。本课话题（假想类）——If you had a time machine, what would you say to your 18-year-old self? 如果你能回到 18 岁，你会对自己说什么？"},
+  {t:"话题思考 · 先想清楚中文",type:"list",items:[
+   "老规矩：先回答「一句话版本」，再展开细节。",
+   "一句话：看清自己的目标，不要在多余的事情上浪费时间。",
+   "细节 1：本来想去国外学习发展——要坚定。",
+   "细节 2：因为在国内机会更少、对行业的理解也更少。",
+   "细节 3（情感线）：学会理解父母、照顾他们、分担压力。"]},
+  {t:"演讲稿构建 · 逐句精讲",type:"table",rows:[
+   ["如果回到 18 岁，我会告诉自己：确立清晰的目标。","If I went back to 18 years old, I would tell myself to set a clear goal.（would = will 过去式；tell myself to do）"],
+   ["不要在不重要的事情上浪费时间。","...and stop wasting time on unimportant things.（stop doing；on 接事情）"],
+   ["我会坚定地告诉自己：去国外学习和发展。","I would firmly tell myself to study and develop abroad.（firmly 副词修饰动词）"],
+   ["因为在国内机会更少，对行业的理解也更少。","Because in China there is less chance and less understanding of the industry.（less + 不可数名词）"],
+   ["另外，情感对我来说也很重要。","Besides, emotion is also very important for me.（besides 另外）"],
+   ["我应该学会理解父母、照顾他们、尽可能分担他们的压力。","I should learn to understand my parents, take care of them and share their pressure as much as I can."]]},
+  {t:"范文 · 回到 18 岁（完整演讲）",type:"article",paras:[
+   ["If I went back to 18 years old, I would tell myself to set a clear goal and stop wasting time on unimportant things.","如果回到 18 岁，我会告诉自己确立清晰的目标，不要在不重要的事情上浪费时间。"],
+   ["I would firmly tell myself to study and develop abroad, because in China there is less chance and less understanding of the industry.","我会坚定地告诉自己去国外学习和发展，因为在国内机会更少、对行业的理解也更少。"],
+   ["Besides, emotion is also very important for me. I should learn to understand my parents, take care of them and share their pressure as much as I can.","另外，情感对我来说也很重要。我应该学会理解父母、照顾他们、尽可能分担他们的压力。"],
+   ["So that's what I want to say to my 18-year-old self.","这就是我想对 18 岁的自己说的话。"]],
+   note:"假想话题是演讲的高阶玩法——用 would 谈「如果」，既有语法含量又有真情实感。跟读 🔊 注意语块停顿。"},
+  {t:"课后作业",type:"homework",text:"① 演讲稿背熟脱稿；② 用 would 造 2 句假想句（If I... I would...）；③ 用 as much as I can 造 1 句；④ 每天 5 词 5 句继续，周末背本周话题。"}
+ ]
+}
 ];
 
 /* ================= 单词数据 =================
    ★★★ 新单词粘贴在这一行的上方 ★★★
    格式：{w:单词, p:音标, pos:词性, m:中文, e:例句, em:例句中文, cat:分类} */
 const WORDS=[
+{w:"barbecue",p:"/ˈbɑːbɪkjuː/",pos:"n./v.",m:"烧烤",e:"Zibo barbecue is very famous.",em:"淄博烧烤很有名。",cat:"课堂"},
+{w:"goal",p:"/ɡəʊl/",pos:"n.",m:"目标",e:"I would tell myself to set a clear goal.",em:"我会告诉自己确立清晰的目标。",cat:"课堂"},
+{w:"waste",p:"/weɪst/",pos:"v./n.",m:"浪费",e:"Stop wasting time on unimportant things.",em:"停止在不重要的事上浪费时间。",cat:"课堂"},
+{w:"besides",p:"/bɪˈsaɪdz/",pos:"adv.",m:"另外；而且",e:"Besides, emotion is also very important for me.",em:"另外，情感对我来说也很重要。",cat:"课堂"},
+{w:"emotion",p:"/ɪˈməʊʃn/",pos:"n.",m:"情感；情绪",e:"Emotion is also very important for me.",em:"情感对我来说也很重要。",cat:"课堂"},
+{w:"pressure",p:"/ˈpreʃə/",pos:"n.",m:"压力（客观的）",e:"I share their pressure as much as I can.",em:"我尽可能分担他们的压力。",cat:"课堂"},
+{w:"share",p:"/ʃeə/",pos:"v.",m:"分享；分担",e:"We both like to share our feelings.",em:"我们都喜欢分享感受。",cat:"课堂"},
+{w:"chance",p:"/tʃɑːns/",pos:"n.",m:"机会",e:"In China there is less chance.",em:"在国内机会更少。",cat:"课堂"},
 {w:"laugh",p:"/lɑːf/",pos:"v./n.",m:"笑；大笑",e:"I usually love to make someone laugh.",em:"我平时喜欢逗人笑。",cat:"课堂"},
 {w:"honest",p:"/ˈɒnɪst/",pos:"adj.",m:"坦诚的",e:"I hope we can have an honest relationship.",em:"希望我们能坦诚相处。",cat:"课堂"},
 {w:"recommendation",p:"/ˌrekəmenˈdeɪʃn/",pos:"n.",m:"推荐",e:"Do you have any recommendation for fun places?",em:"有什么好玩的地方推荐吗？",cat:"课堂"},
@@ -1127,7 +1172,8 @@ function renderHome(){
     '<div><b>'+LESSONS.filter(l=>!l.pending).length+'</b><span>已更新课程</span></div>'+
     '<div><b>'+WORDS.length+'</b><span>生词</span></div>'+
     '<div><b>×3</b><span>课文每日朗读</span></div>'+
-  '</div></div>'+
+  '</div>'+
+  '</div>'+
   '<section class="card"><h3><span class="num">★</span>学习打卡任务</h3>'+
   '<ul class="lines">'+
    '<li>✅ 新概念课文：先看懂中文 → 再听录音跟读 → 降低音量、气息平稳、抑扬顿挫</li>'+
@@ -1163,7 +1209,7 @@ function secHtml(s){
   if(s.type==="homework"){
     return '<section class="card"><h3><span class="num">📝</span>'+s.t+'</h3><div class="homework-box"><b>作业：</b>'+s.text+"</div></section>";
   }
-  return '<section class="card"><h3><span class="num">📌</span>'+s.t+'</h3><ul class="lines">'+
+  return '<section class="card"><h3><span class="num">📌</span>'+s.t+'</h3>'+(s.img?'<img class="lesson-img" src="'+s.img+'">':'')+'<ul class="lines">'+
   s.items.map(i=>"<li>"+i+"</li>").join("")+"</ul>"+
   (s.note?'<div class="tip">💡 '+s.note+"</div>":"")+"</section>";
 }
