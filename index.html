@@ -224,19 +224,71 @@ tr:hover td{background:#faf8f5}
   .quick-actions{grid-template-columns:repeat(3,1fr)}
   .lesson-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
 }
+@media(max-width:900px){
+  .sidebar{width:200px}
+  .quick-actions{grid-template-columns:repeat(3,1fr)}
+  .lesson-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+}
+
+/* ===== 移动端响应式 ===== */
 @media(max-width:680px){
   .app{flex-direction:column}
-  .sidebar{width:100%;height:auto;max-height:50vh;border-right:none;border-bottom:1px solid var(--border)}
+  .sidebar{
+    position:fixed;top:0;left:0;width:260px;height:100vh;height:-webkit-fill-available;
+    transform:translateX(-100%);transition:transform .3s ease;
+    border-right:1px solid var(--border);border-bottom:none;max-height:none;z-index:100
+  }
+  .sidebar.open{transform:translateX(0)}
+  .main{width:100%}
   .content{padding:16px}
   .quick-actions{grid-template-columns:1fr}
   .timer-display{font-size:48px}
+  .mobile-header{
+    display:flex;align-items:center;gap:10px;
+    padding:12px 16px;background:var(--card);border-bottom:1px solid var(--border);
+    position:sticky;top:0;z-index:50
+  }
+  .mobile-header .mh-logo{font-size:15px;font-weight:800;color:var(--brand)}
+  .mobile-header .mh-sub{font-size:11px;color:var(--muted)}
+  .menu-btn{
+    width:36px;height:36px;border:none;background:var(--bg);border-radius:8px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer
+  }
+  .menu-btn span{display:block;width:18px;height:2px;background:var(--text);border-radius:1px;transition:.2s}
+  .overlay{
+    position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:90;opacity:0;pointer-events:none;transition:opacity .3s
+  }
+  .overlay.show{opacity:1;pointer-events:auto}
+  .lesson-grid{grid-template-columns:1fr}
+  .script-cards{grid-template-columns:1fr}
+  .vocab-grid{grid-template-columns:1fr}
+  .hero h2{font-size:20px}
+  .ring{width:90px;height:90px}
+  .ring-text .num{font-size:18px}
+  .ring-info .big{font-size:22px}
 }
+@media(min-width:681px){
+  .mobile-header{display:none}
+  .overlay{display:none}
+}
+body.no-scroll{overflow:hidden}
 </style>
 <base target="_blank">
 </head>
 <body>
+<!-- 移动端顶部栏 -->
+<div class="mobile-header" id="mobileHeader">
+  <button class="menu-btn" id="menuBtn" aria-label="打开菜单">
+    <span></span><span></span><span></span>
+  </button>
+  <div>
+    <div class="mh-logo">🌸 Hanna 英语复习站</div>
+    <div class="mh-sub">服装外贸 · 口语提升</div>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
 <div class="app">
-  <aside class="sidebar">
+  <aside class="sidebar" id="sidebar">
     <div class="logo">
       <h1>🌸 Hanna 英语复习站</h1>
       <p>服装外贸 · 口语提升</p>
@@ -1176,6 +1228,47 @@ const LESSONS=[
    ]},
    {t:"🎯 课后作业",type:"homework",text:"① 选择1个范文，用90秒完整说一遍；② 同一篇范文，压缩到60秒；③ 每天最少练习10分钟，计时器页面已内置范文和倒计时功能"}
  ]
+},
+
+{
+ id:22, date:"2026-11-16", title:"第二十二课：雅思口语模拟考试 · 描述与朋友一起做的计划", subtitle:"Part 1 问答 → Part 2 演讲 → Part 3 深度讨论",
+ review:["① 复习 Part 1 三个问题：用完整句回答，不能只答 Yes/No，要加 because / for example","② Part 2 演讲稿：1分钟说清 plan 是什么、和谁做、做什么、感受如何","③ 背诵关键句型：I believe we have a chance to … in the future / I always have a habit about …","④ 用计时器练 Part 2：给自己1分钟准备，然后连续说1-2分钟"],
+ extra:["<b>回答不能太短：</b>Yes 后面必须接 because / for example / I think … 否则听起来很空洞。","<b>about 连接法：</b>先说关键信息，再用 about 接次要内容。I always have a habit about making plans.（关于做计划的习惯）","<b>中文无主语→英语补主语：</b>中文说「后面还有机会一起完成」，英语必须补 we → I believe <b>we</b> have a chance to finish it together in the future.","<b> disappointed vs disappointing：</b>I'm disappointed（我感到失望）/ It's disappointing（这件事令人失望），主语是人用 -ed。"],
+ sections:[
+   {t:"📝 课前分享 · 工作会议",type:"dialog",lines:[
+     ["Hanna","We had a long meeting today."],
+     ["Mike","What was the meeting about?"],
+     ["Hanna","The meeting hopes us to increase responsibility, to communicate more with each other, and we should be a more unity team."],
+     ["Mike","Good! Three key points: increase responsibility, communicate more with each other, and be more team unity."]
+   ],note:"新词：responsibility [rɪˌspɒnsəˈbɪləti] 责任心 · unity [ˈjuːnəti] 团结 · communicate [kəˈmjuːnɪkeɪt] 沟通"},
+   {t:"📋 Part 1 · 一问一答（1-2句话）",type:"article",paras:[
+     ["Q1: Do you like making plans for your free time?","A: Yes, I like making plans in my free time. For example, I often plan where to go on the weekend on Friday night."],
+     ["Q2: Is it easy for you to manage your time?","A: Yes, I think it is easy for me because I always have a habit about making plans."],
+     ["Q3: What do you do if the plan with friends gets canceled?","A: I think I would be a little bit disappointed, but it is fine. I believe we have a chance to finish it together in the future."]
+   ],note:"要点：① 不能只答 Yes/No，必须加 because / for example 补充细节 ② manage time 管理时间 ③ get canceled 被取消 ④ a little bit disappointed 有一点点失望 ⑤ it is fine 没事（最地道）"},
+   {t:"🎤 Part 2 · 1分钟演讲",type:"article",paras:[
+     ["题目：Describe a plan you made with your friend","You should say: what the plan was / who you planned it with / what you planned to do / how you felt about this plan"],
+     ["Hanna 的尝试稿","One day my friend said she wanted to learn stage walk. I'm very interested in it. So we wanna learn stage walk in a factory. Although it's a little difficult, my friend kept it up. I learn from her. Finally, we learn most of the stage walk skills. I think it's very positive for our work and life. She is an important friend."],
+     ["Mike 优化稿","One day my friend told me she wanted to learn stage walk. I was very interested in it, so we planned to learn it together in a factory. Although it was a little difficult, my friend kept it up and I learned a lot from her. Finally, we learned most of the stage walk skills. I think it was very positive for our work and life. She is really an important friend to me."]
+   ],note:"改错：① wanna → planned to ② kept up → kept it up（坚持下去）③ learn → learned（过去式）④ 加上 I learned a lot from her 更完整"},
+   {t:"💬 Part 3 · 深度讨论",type:"dialog",lines:[
+     ["Q1: Why do many people like to make plans with friends?","Hanna: I think making plans with friends is caring for each other."],
+     ["Q2: Do you think it's important to stick to plans?","Hanna: Yes, it's very important. If you don't stick to the plan, then it's empty to your work or life."],
+     ["Q3: What problems may happen when friends make plans together?","Hanna: I think the biggest problem is we may have different ideas."],
+     ["Q4: Do you think young people are better at managing time than older people?","Hanna: I think different people have personal advantages. I don't think we need to compare them."]
+   ],note:"stick to plans = keep it up 坚持计划 · different ideas 不同意见 · personal advantages 个人优势"},
+   {t:"🔑 核心句型",type:"table",rows:[
+     ["回答不能太简单","Yes, I … because … / Yes, I … for example …"],
+     ["关于……的习惯","I always have a habit about making plans."],
+     ["我相信我们有机会……","I believe we have a chance to finish it together in the future."],
+     ["有一点点失望","I would be a little bit disappointed, but it is fine."],
+     ["坚持计划","It's important to stick to plans. / Keep it up."],
+     ["管理时间","It's easy for me to manage my time."],
+     ["计划被取消","What do you do if the plan gets canceled?"],
+     ["不同意见","The biggest problem is we may have different ideas."]
+   ]},
+   {t:"📚 课后作业",type:"homework",text:"① 每天上下午各抽30分钟读英语（上午9:30-10:00 / 下午2:00-2:30），用计时器提醒；② 用今天Part 2的题目，给自己1分钟准备，然后连续说1-2分钟，录音对比；③ 复习Part 1三个问题，确保每个回答都有 because / for example 补充细节；④ 把 'I always have a habit about …' 这个句型套用到自己的3个习惯上造句。"}
+ ]
 }
 ];
 
@@ -1404,7 +1497,14 @@ const WORDS=[
 {w:"pressure",p:"/ˈpreʃə/",pos:"n.",m:"压力",e:"Time pressure helps me speak faster.",em:"时间压力让我说得更快。",cat:"Lesson 21"},
 {w:"fluent",p:"/ˈfluːənt/",pos:"adj.",m:"流利的",e:"I want to become fluent in English.",em:"我想说一口流利的英语。",cat:"Lesson 21"},
 {w:"script",p:"/skrɪpt/",pos:"n.",m:"脚本；文稿",e:"I memorize scripts before speaking.",em:"我说之前先背熟文稿。",cat:"Lesson 21"},
-{w:"pace",p:"/peɪs/",pos:"n.",m:"速度；节奏",e:"Keep a steady pace when speaking.",em:"说话时保持稳定的节奏。",cat:"Lesson 21"}
+{w:"pace",p:"/peɪs/",pos:"n.",m:"速度；节奏",e:"Keep a steady pace when speaking.",em:"说话时保持稳定的节奏。",cat:"Lesson 21"},
+{w:"responsibility",p:"/rɪˌspɒnsəˈbɪləti/",pos:"n.",m:"责任心；责任",e:"The meeting hopes us to increase responsibility.",em:"会议要求我们增强责任心。",cat:"Lesson 22"},
+{w:"unity",p:"/ˈjuːnəti/",pos:"n.",m:"团结；统一",e:"We should be a more unity team.",em:"我们应该成为更团结的团队。",cat:"Lesson 22"},
+{w:"communicate",p:"/kəˈmjuːnɪkeɪt/",pos:"v.",m:"沟通；交流",e:"We need to communicate more with each other.",em:"我们需要多互相沟通。",cat:"Lesson 22"},
+{w:"cancel",p:"/ˈkænsl/",pos:"v.",m:"取消",e:"What do you do if the plan gets canceled?",em:"如果计划取消了你会怎么做？",cat:"Lesson 22"},
+{w:"disappointed",p:"/ˌdɪsəˈpɔɪntɪd/",pos:"adj.",m:"感到失望的",e:"I would be a little bit disappointed.",em:"我会有点点失望。",cat:"Lesson 22"},
+{w:"stick to",p:"/stɪk tuː/",pos:"phr.",m:"坚持；遵守",e:"It is important to stick to plans.",em:"坚持计划很重要。",cat:"Lesson 22"},
+{w:"manage",p:"/ˈmænɪdʒ/",pos:"v.",m:"管理；处理",e:"It is easy for me to manage my time.",em:"我很容易管理我的时间。",cat:"Lesson 22"}
 ];
 
 const TIMER_SCRIPTS=[
@@ -1423,18 +1523,43 @@ document.addEventListener("click",function(e){const b=e.target.closest(".spk");i
 
 function renderNav(){
   const active=location.hash;
-  let html='<a href="#/" class="'+(active==='#/'||active===''?'active':'')+'">🏠 首页</a>';
-  html+='<a href="#/timer" class="'+(active==='#/timer'?'active':'')+'">⏱️ 计时训练</a>';
-  html+='<a href="#/vocab" class="'+(active==='#/vocab'?'active':'')+'">📚 生词本 <span class="badge">'+WORDS.length+'</span></a>';
+  let html='<a href="#/" class="'+(active==='#/'||active===''?'active':'')+'" onclick="closeSidebar()">🏠 首页</a>';
+  html+='<a href="#/timer" class="'+(active==='#/timer'?'active':'')+'" onclick="closeSidebar()">⏱️ 计时训练</a>';
+  html+='<a href="#/vocab" class="'+(active==='#/vocab'?'active':'')+'" onclick="closeSidebar()">📚 生词本 <span class="badge">'+WORDS.length+'</span></a>';
   html+='<div class="nav-vocab"></div>';
   LESSONS.forEach(l=>{
     const cls=(active==='#/lesson/'+l.id)?'active':'';
     const label=l.pending?'⏳':'📖';
     const title=l.pending?'第'+l.id+'课（待更新）':l.title.split('：')[0];
-    html+='<a href="#/lesson/'+l.id+'" class="'+cls+'">'+label+' '+title+'<span class="date">'+l.date.slice(5)+'</span></a>';
+    html+='<a href="#/lesson/'+l.id+'" class="'+cls+'" onclick="closeSidebar()">'+label+' '+title+'<span class="date">'+l.date.slice(5)+'</span></a>';
   });
   $("nav").innerHTML=html;
 }
+
+/* ---- 移动端侧边栏 ---- */
+function toggleSidebar(){
+  const sb=$('sidebar'),ov=$('overlay');
+  const open=sb.classList.toggle('open');
+  ov.classList.toggle('show',open);
+  document.body.classList.toggle('no-scroll',open);
+}
+function closeSidebar(){
+  $('sidebar').classList.remove('open');
+  $('overlay').classList.remove('show');
+  document.body.classList.remove('no-scroll');
+}
+function openSidebar(){
+  $('sidebar').classList.add('open');
+  $('overlay').classList.add('show');
+  document.body.classList.add('no-scroll');
+}
+
+// 汉堡菜单 & 遮罩点击
+setTimeout(function(){
+  const mb=$('menuBtn'),ov=$('overlay');
+  if(mb)mb.addEventListener('click',toggleSidebar);
+  if(ov)ov.addEventListener('click',closeSidebar);
+},0);
 
 /* ---- 环形进度 ---- */
 function ringSvg(pct){
@@ -1675,6 +1800,7 @@ function filterCat(c){currentCat=c;renderVocab();}
 
 /* ---- 路由 ---- */
 function route(){
+  closeSidebar();
   const h=location.hash;
   renderNav();
   if(h==="#/"||h===""||h==="#") renderHome();
