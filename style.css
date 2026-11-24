@@ -270,3 +270,27 @@ tr:hover td{background:#faf8f5}
   .overlay{display:none}
 }
 body.no-scroll{overflow:hidden}
+
+/* 范文中心 */
+.essay-lesson{margin-bottom:24px}
+.essay-lh{display:flex;align-items:center;gap:8px;margin:20px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--brand);font-size:16px}
+.essay-lnum{background:var(--brand);color:#fff;padding:2px 8px;border-radius:12px;font-size:12px;font-weight:700;flex-shrink:0}
+.essay-ltitle{color:var(--brand);font-weight:700}
+.essay-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.essay-head{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.essay-tag{font-size:11px;padding:2px 8px;border-radius:4px;background:#e8f5e9;color:#2e7d32;font-weight:600}
+.essay-tag[data-type="dialog"],.essay-head:has(.essay-tag:contains("对话")) .essay-tag{background:#e3f2fd;color:#1565c0}
+.essay-sec-title{font-weight:700;color:#333;font-size:14px;flex:1}
+.essay-play-btn{background:var(--brand);color:#fff;border:none;padding:4px 12px;border-radius:16px;font-size:12px;cursor:pointer;transition:.2s}
+.essay-play-btn:hover{background:var(--brand2)}
+.essay-para{margin-bottom:10px;padding-bottom:10px;border-bottom:1px dashed #eee}
+.essay-para:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.essay-en{font-size:14px;color:#2c3e50;line-height:1.7;margin-bottom:4px;cursor:pointer;border-radius:4px;padding:4px 8px;margin-left:-8px;transition:background .2s}
+.essay-en:hover{background:#fce4ec}
+.essay-cn{font-size:13px;color:#888;line-height:1.6}
+.essay-dialog-line{display:flex;gap:8px;margin-bottom:8px;align-items:flex-start}
+.essay-speaker{font-size:12px;font-weight:700;color:var(--brand);flex-shrink:0;min-width:50px;text-align:right;padding-top:2px}
+.essay-dtxt{font-size:14px;color:#2c3e50;line-height:1.6;flex:1;cursor:pointer;border-radius:4px;padding:4px 8px;transition:background .2s}
+.essay-dtxt:hover{background:#fce4ec}
+.essay-note{font-size:12px;color:#888;background:#f8f9fa;padding:8px 12px;border-radius:6px;margin-top:10px;border-left:3px solid var(--brand)}
+
