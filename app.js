@@ -17,6 +17,7 @@ function renderNav(){
   const active=location.hash;
   let html='<a href="#/" class="'+(active==='#/'||active===''?'active':'')+'" onclick="closeSidebar()">🏠 首页</a>';
   html+='<a href="#/timer" class="'+(active==='#/timer'?'active':'')+'" onclick="closeSidebar()">⏱️ 计时训练</a>';
+  html+='<a href="#/essays" class="'+(active==='#/essays'?'active':'')+'" onclick="closeSidebar()">📝 范文中心</a>';
   html+='<a href="#/vocab" class="'+(active==='#/vocab'?'active':'')+'" onclick="closeSidebar()">📚 生词本 <span class="badge">'+WORDS.length+'</span></a>';
   html+='<div class="nav-vocab"></div>';
   LESSONS.forEach(l=>{
@@ -61,6 +62,65 @@ function ringSvg(pct){
 }
 
 /* ---- 首页 ---- */
+
+function renderEssays(){
+  let html='<div class="content"><h2>范文中心</h2><p style="color:#888;margin-bottom:16px;font-size:13px">共收录 '+LESSONS.reduce((sum,l)=>sum+l.sections.filter(s=>s.type==='article'||s.type==='dialog').length,0)+' 篇范文，点击英文内容即可朗读</p>';
+
+  LESSONS.forEach(lesson=>{
+    const essaySections=lesson.sections.filter(s=>s.type==='article'||s.type==='dialog');
+    if(essaySections.length===0)return;
+
+    html+='<div class="essay-lesson"><h3 class="essay-lh"><span class="essay-lnum">第'+lesson.id+'课</span><span class="essay-ltitle">'+esc(lesson.title.split('：')[1]||lesson.title)+'</span></h3>';
+
+    essaySections.forEach(sec=>{
+      const isArticle=sec.type==='article';
+      // 构建朗读文本
+      let speakText='';
+      if(isArticle && sec.paras){
+        speakText=sec.paras.map(p=>p[0]).join('. ');
+      }else if(sec.lines){
+        speakText=sec.lines.map(l=>l[1]).join('. ');
+      }
+
+      html+='<div class="essay-card">';
+      html+='<div class="essay-head">';
+      html+='<span class="essay-tag">'+(isArticle?'📄 文章':'💬 对话')+'</span>';
+      html+='<span class="essay-sec-title">'+esc(sec.t||'')+'</span>';
+      if(speakText){
+        html+='<button class="essay-play-btn spk" data-say="'+esc(speakText)+'" title="朗读整篇">▶ 朗读整篇</button>';
+      }
+      html+='</div>';
+
+      if(isArticle && sec.paras){
+        sec.paras.forEach((p,pi)=>{
+          html+='<div class="essay-para">';
+          html+='<div class="essay-en spk" data-say="'+esc(p[0])+'">'+esc(p[0])+'</div>';
+          if(p[1]) html+='<div class="essay-cn">'+p[1]+'</div>';
+          html+='</div>';
+        });
+      }else if(sec.lines){
+        sec.lines.forEach(l=>{
+          html+='<div class="essay-dialog-line">';
+          html+='<span class="essay-speaker">'+esc(l[0])+'</span>';
+          html+='<span class="essay-dtxt spk" data-say="'+esc(l[1])+'">'+esc(l[1])+'</span>';
+          html+='</div>';
+        });
+      }
+
+      if(sec.note){
+        html+='<div class="essay-note">'+sec.note+'</div>';
+      }
+
+      html+='</div>';
+    });
+
+    html+='</div>';
+  });
+
+  html+='</div>';
+  $("main").innerHTML=html;
+}
+
 function renderHome(){
   const done=LESSONS.filter(l=>!l.pending).length;
   const total=LESSONS.length;
@@ -297,6 +357,7 @@ function route(){
   renderNav();
   if(h==="#/"||h===""||h==="#") renderHome();
   else if(h==="#/vocab") renderVocab();
+  else if(h==="#/essays") renderEssays();
   else if(h==="#/timer") renderTimer();
   else if(h.startsWith("#/lesson/")){const id=parseInt(h.split("/").pop());renderLesson(id);}
   else $("main").innerHTML='<div class="content"><p>页面不存在</p></div>';
