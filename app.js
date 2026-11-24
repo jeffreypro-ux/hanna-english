@@ -279,7 +279,7 @@ function renderVocab(){
   const list=currentCat==="all"?WORDS:WORDS.filter(w=>w.cat===currentCat);
   list.forEach(w=>{
     html+='<div class="vocab-card">';
-    html+='<div class="v-top"><span class="v-word spk" data-say="'+esc(w.w)+'" title="点击发音">'+esc(w.w)+'</span><span class="v-pos">'+w.pos+'</span></div>';
+    html+='<div class="v-top"><span class="v-word">'+esc(w.w)+'</span><span class="v-pos">'+w.pos+'</span></div>';
     html+='<div class="v-phon">'+w.p+'</div>';
     html+='<div class="v-mean">'+esc(w.m)+'</div>';
     html+='<div class="v-ex">'+esc(w.e)+'<br><span style="color:var(--muted)">'+esc(w.em)+'</span></div>';
